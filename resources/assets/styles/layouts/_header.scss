@@ -1,0 +1,47 @@
+#main-nav {
+  border-bottom: 1px solid $border-color;
+}
+
+.main-nav {
+  gap: 2rem;
+  .menu-item {
+    .nav-link {
+      color: #000;
+    }
+  }
+}
+
+.dropdown-toggle {
+  &::after {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 10px;
+  }
+}
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+.menu-option {
+  display: flex;
+  .iconify {
+    cursor: pointer;
+    font-size: 18px;
+    height: 100%;
+    vertical-align: unset;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: flex;
+  }
+}

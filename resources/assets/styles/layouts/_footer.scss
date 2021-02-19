@@ -1,0 +1,35 @@
+.page-footer {
+  background-color: $bg-secondary;
+  color: white;
+  padding: 3rem 0;
+  h4 {
+    font-weight: 400;
+  }
+  p {
+    color: $text-white;
+    margin-bottom: 10px;
+  }
+}
+
+.footer-nav {
+  margin-top: 2rem !important;
+  border-right: 1px solid #333;
+  &:nth-child(2) {
+    border-right: none !important;
+  }
+  li {
+    margin-bottom: 10px;
+    a {
+      color: $text-tertiary;
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-tertiary;
+  }
+}

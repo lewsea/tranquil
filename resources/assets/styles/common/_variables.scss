@@ -1,0 +1,39 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1169px,
+  xl: 1420px,
+) !default;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600&display=swap");
+
+// Font
+$font-main: "Poppins", sans-serif;
+$font-sec: "Open Sans", sans-serif;
+// Background Color
+$bg-primary: #111;
+$bg-secondary: #222;
+// Border
+$border-color: #bbbbbb;
+$border-radius: 15px;
+$border-radius-img: 8px;
+// Text Color
+$text-primary: #000;
+$text-secondary: #1a252a;
+$text-tertiary: #6c757d;
+$text-white: #fff;
+// Box Shadow
+$material-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+  0 10px 10px rgba(0, 0, 0, 0.22);
+$soft-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+$neu-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+// Theme Color
+$theme-color: #61dafb;
+$theme-gradient: linear-gradient(to top, #61dafb00, #61dafb);

@@ -1,0 +1,25 @@
+.accent-btn {
+  padding: 15px 3rem;
+  &:hover {
+    text-decoration: none;
+    color: unset;
+  }
+}
+
+.btn-main {
+  @extend .accent-btn;
+  background-color: $theme-color;
+  color: $text-white;
+}
+
+.btn-sec {
+  @extend .accent-btn;
+  border: 1px solid $theme-color;
+  color: $text-primary;
+}
+
+.btn-blk {
+  @extend .accent-btn;
+  background-color: $bg-secondary;
+  color: $text-white;
+}

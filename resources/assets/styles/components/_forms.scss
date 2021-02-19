@@ -1,0 +1,50 @@
+/** Search form */
+.search-form {
+  @extend .form-inline;
+}
+
+.search-form label {
+  @extend .form-group;
+
+  font-weight: normal;
+}
+
+.search-form .search-field {
+  @extend .form-control;
+}
+
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+// Contact Form 7
+
+.wpcf7 {
+  .wpcf7-form {
+    p {
+      display: flex;
+      position: relative;
+      .wpcf7-form-control-wrap {
+        input {
+          padding: 10px 1rem;
+          width: 100%;
+          border: none;
+        }
+      }
+      .submit {
+        background-color: $theme-color;
+        color: $text-white;
+        border-radius: 0;
+        border: none;
+        position: absolute;
+        right: 0;
+        width: 20%;
+        padding: 7px 1rem 10px;
+        &:hover {
+          background-color: darken($theme-color, 15%);
+        }
+      }
+    }
+  }
+}
