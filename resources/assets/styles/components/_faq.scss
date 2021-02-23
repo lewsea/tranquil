@@ -1,0 +1,33 @@
+.faq-accordion {
+  .panel-group {
+    .panel {
+      border: 1px solid $border-color;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      .panel-heading {
+        .panel-title {
+          margin: 0;
+          a {
+            display: block;
+            color: $text-secondary;
+            font-size: clamp(1.2rem, 4vw, 24px);
+            &:hover {
+              text-decoration: none;
+            }
+            i {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+      .panel-collapse {
+        .panel-body {
+          p {
+            color: $text-secondary;
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
 
 @section('content')
 
-    @twocol([
+    @typeone([
         'name' => 'hero',
         'subtitle' => 'TRANQUIL',
         'title' => 'Book Catalog WordPress Theme',
@@ -21,13 +21,13 @@
         @slot('img')
             @include('images.hero')
         @endslot
-    @endtwocol
+    @endtypeone
     
-    @include('partials.block-loop')
+    @include('partials.book-loop', ['title' => 'Latest Collection'])
 
     @include('partials.category-loop')
 
-    @twocol([
+    @typeone([
             'name' => 'about',
             'subtitle' => 'ABOUT TRANQUIL',
             'title' => 'Get To Know Us',
@@ -41,9 +41,9 @@
         @slot('img')
             @include('images.about-us')
         @endslot
-    @endtwocol
+    @endtypeone
 
-    @twocol([
+    @typeone([
             'name' => 'collection',
             'subtitle' => 'COLLECTION',
             'title' => 'Browse Our Collection',
@@ -55,15 +55,39 @@
             <a href="" class="btn-main">View Catalog</a>
         @endslot
         @slot('img')
-            @include('partials.block-loop')
+            @include('partials.book-loop', ['title' => ''])
         @endslot
-    @endtwocol
+    @endtypeone
 
     @include('partials.blogpost-loop')
 
-    @include('components.faq')
+    @typetwo(['name' => 'faq'])
+        @slot('sectionheader')
+            @include('partials.section-header', ['subtitle' => 'FAQ SECTION', 'title' => 'How Can We Help You', 'align' => 'text-right'])
+        @endslot
+        @slot('content')
+            <div class="faq-desc">
+                @include('partials.faq')
+            </div>
+            <div class="faq-img">
+                @include('images.faq')
+            </div>
+        @endslot
+        @slot('sectionbtn')
+            @include('partials.section-button', ['class' => 'blk', 'name' => 'Help Center'])
+        @endslot
+    @endtypetwo
 
-    @include('components.testimonials')
-    
+    @typetwo(['name' => 'testimonials'])
+        @slot('sectionheader')
+            @include('partials.section-header', ['subtitle' => 'TESTIMONIALS', 'title' => 'What Our Readers Says'])
+        @endslot
+        @slot('content')
+            @include('partials.comments-loop')
+        @endslot
+        @slot('sectionbtn')
+            @include('partials.section-button', ['class' => 'main', 'name' => 'More Comments'])
+        @endslot
+    @endtypetwo
 
 @endsection

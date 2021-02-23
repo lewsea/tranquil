@@ -16,6 +16,18 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.slick-arrow {
+    &::before {
+        color: $text-primary;
+        font-size: 2rem;
+    }
+}
+
+.slick-slide {
+    min-height: 220px;
+    margin: 0 1rem;
+}
+
 .section-wrapper {
   padding: 1.5rem 0;
   margin: 1.5rem 0;
@@ -26,8 +38,8 @@ h2 {
   a {
     color: $text-white;
     &:hover {
-      color: darken($text-white, 90%);
-      //   color: unset;
+      //   color: darken($text-white, 90%);
+      color: unset;
     }
   }
 }
@@ -136,5 +148,72 @@ h2 {
   }
   .collection-img {
     @extend .col-img;
+  }
+}
+
+.section-wrapper {
+  .section-header {
+    margin-bottom: 3rem;
+    span {
+      font-size: 12px;
+    }
+    h3 {
+      font-size: clamp(2rem, 7vw, 48px);
+      font-weight: 600;
+    }
+  }
+  .section-btn {
+    text-align: center;
+    margin-top: 5rem;
+    a {
+      font-weight: 600;
+      &:hover {
+        color: initial !important;
+      }
+    }
+  }
+}
+
+.faq-wrapper {
+  .faq-container {
+    display: flex;
+    gap: 3rem;
+    .faq-desc {
+      @extend .col-desc;
+    }
+    .faq-img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5%;
+  .comment-block {
+    border-radius: $border-radius-img;
+    background-color: $bg-primary;
+    padding: 1.5rem 1rem;
+    flex: 22.5%;
+    color: $text-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .comment {
+      color: $text-white;
+    }
+    .author {
+      color: $theme-color;
+      font-size: 14px;
+      &:hover {
+        text-decoration: none;
+      }
+      span {
+        color: $text-white;
+      }
+    }
   }
 }

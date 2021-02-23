@@ -1,6 +1,4 @@
-<div class="section-wrapper">
-    <div class="container {{$class}}">
-        <span>{{$subtitle}}</span>
-        <h4>{{$title}}</h4>
-    </div>
+<div class="section-header {{$align}}">
+    <span>{{$subtitle}}</span>
+    <h3>{{$title}}</h3>
 </div>

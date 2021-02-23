@@ -15,6 +15,10 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
     wp_enqueue_script('iconify', '//code.iconify.design/1/1.0.6/iconify.min.js', null, true);
 
+    wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', false, null );
+    wp_enqueue_style( 'slick-theme-css', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css', false, null );
+    wp_enqueue_script('slick-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', null, true);
+
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
@@ -139,7 +143,6 @@ add_action('after_setup_theme', function () {
     /**
      * Alias Component
      */
-    sage('blade')->compiler()->component('components.blocks', 'blocks');
-    sage('blade')->compiler()->component('components.hero', 'hero');
-    sage('blade')->compiler()->component('components.two-col', 'twocol');
+    sage('blade')->compiler()->component('components.type-one', 'typeone');
+    sage('blade')->compiler()->component('components.type-two', 'typetwo');
 });

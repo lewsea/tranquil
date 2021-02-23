@@ -12,6 +12,11 @@
     flex: 20%;
     padding: 1rem;
     border-radius: $border-radius;
+    transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    &:hover {
+      box-shadow: $material-shadow;
+      transform: scale(1.05);
+    }
     &:nth-of-type(1) {
       background-color: #749ee8;
     }
@@ -35,6 +40,11 @@
       font-size: clamp(2rem, 4vw, 34px);
       color: $text-white;
       margin: 0;
+      font-weight: 500;
+      line-height: 2.5rem;
+      &:hover {
+        text-decoration: none;
+      }
     }
     .block-img {
       align-self: center;

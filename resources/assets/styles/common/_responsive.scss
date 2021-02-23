@@ -30,6 +30,9 @@ $xl: 1200px;
       }
     }
   }
+  .blogs-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: $md) {
@@ -61,6 +64,11 @@ $xl: 1200px;
 }
 
 @media (max-width: $lg) {
+  .faq-wrapper {
+    .faq-container {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 @media (max-width: $xl) {

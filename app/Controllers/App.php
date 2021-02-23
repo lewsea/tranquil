@@ -6,7 +6,6 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
-    
     use Partials\PrimaryMenu; 
 
     public function bookPost() {
@@ -52,10 +51,22 @@ class App extends Controller
             'posts_per_page' => 3,
         );
 
-        $blogposts = new \WP_Query($args);
+        $terms = new \WP_Query($args);
 
-        return $blogposts;
+        return $terms;
     }
+
+    public function blogPagination() {
+        $args = array(
+            'number' => 7,
+            'offset' => 0,
+            'status' => 'approve',
+        );
+
+        return $args;
+    }
+
+    
 
     public function siteName()
     {

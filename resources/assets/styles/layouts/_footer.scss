@@ -33,3 +33,13 @@
     color: $text-tertiary;
   }
 }
+
+.footer-img {
+  background: $theme-gradient;
+  margin-top: 5rem;
+  padding: 5rem 0;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
