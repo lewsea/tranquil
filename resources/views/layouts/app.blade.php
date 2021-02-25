@@ -18,6 +18,11 @@
     </div>
     @php do_action('get_footer') @endphp
     @include('partials.footer')
+    {{-- @if (is_page('books'))
+        @include('partials.footer-sec')
+        @else
+        @include('partials.footer')
+    @endif --}}
     @php wp_footer() @endphp
   </body>
 </html>

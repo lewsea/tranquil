@@ -144,10 +144,28 @@ h2 {
     @extend .col-desc;
     p {
       color: $text-primary;
+      max-width: 550px
+    }
+    .collection-cta {
+        margin-top: 3rem
     }
   }
   .collection-img {
     @extend .col-img;
+    .section-wrapper {
+        margin-top: 8rem;
+    }
+    .blocks-container {
+        gap: 2rem;
+        .block {
+            width: 260px;
+            flex: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+            &:nth-of-type(even) {
+                margin-top: -10rem;
+            }
+        }
+    }
   }
 }
 
@@ -217,3 +235,4 @@ h2 {
     }
   }
 }
+

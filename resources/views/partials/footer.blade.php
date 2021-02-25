@@ -1,6 +1,3 @@
-<div class="footer-img">
-    @include('images.footer-humaaans')
-</div>
 <footer class="page-footer">
   <div class="container">
       <div class="row">

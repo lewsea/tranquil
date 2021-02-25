@@ -1,9 +1,9 @@
 <section class="{{$name}}-wrapper section-wrapper">
     <div class="container">
         {{$sectionheader}}
-        <section class="{{$name}}-container">
+        <div class="{{$name}}-container">
             {{$content}}
-        </section>
+        </div>
         {{$sectionbtn}}
     </div>
 </section>

@@ -35,7 +35,7 @@ class App extends Controller
     public function catLoop() {
         $args = get_terms(
             array(
-                'taxonomy'   => 'book_categories',
+                'taxonomy'   => 'category',
                 'hide_empty' => true,
             )
         );
@@ -56,6 +56,17 @@ class App extends Controller
         return $terms;
     }
 
+    public function bookCat() {
+        $categories = get_categories(array(
+            'post_type' => 'post',
+            'taxonomy'   => 'category',
+            'hide_empty' => true,
+            'number' => 2,
+        ));
+
+        return $categories;
+    }
+
     public function blogPagination() {
         $args = array(
             'number' => 7,
@@ -65,8 +76,6 @@ class App extends Controller
 
         return $args;
     }
-
-    
 
     public function siteName()
     {

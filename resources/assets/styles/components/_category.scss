@@ -1,0 +1,38 @@
+.category-container {
+    @extend .container;
+    max-width: 1169px;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%;
+    justify-content: center;
+    .category {
+        border-radius: $border-radius;
+        position: relative;
+        transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        .cat-desc {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 1rem 2rem;
+            z-index: 4;
+            a {
+                font-size: clamp(2rem, 4vw, 42px);
+                color: $text-primary;
+                margin: 0;
+                font-weight: 500;
+                line-height: 2.5rem;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        &:hover {
+        box-shadow: $material-shadow;
+        transform: scale(1.05);
+        }
+    }
+}

@@ -93,14 +93,16 @@ Container::getInstance()
         ]);
     }, true);
 
+    // why is this not working in controller ? find a way to make it work again, it just returns zero when i put it in App.php, must be because its inside the loop.
+
 function reading_time() {
     $content = get_post_field( 'post_content', $post->ID );
     $word_count = str_word_count( strip_tags( $content ) );
     $readingtime = ceil($word_count / 200);
     if ($readingtime == 1) {
-    $timer = " minute";
+    $timer = " min.";
     } else {
-    $timer = " minutes";
+    $timer = " mins.";
     }
     $totalreadingtime = $readingtime . $timer;
     return $totalreadingtime;

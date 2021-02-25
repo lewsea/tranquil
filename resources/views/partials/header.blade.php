@@ -1,5 +1,7 @@
 <header class="page-header">
 
+    <div id="scroll-top-button"></div>
+
     <a class="skip-link sr-only sr-only-focusable" href="#content">@php esc_html_e( 'Skip to content', 'sage')@endphp</a>
 
     <nav id="main-nav" class="navbar navbar-expand-md" aria-labelledby="main-nav-label">

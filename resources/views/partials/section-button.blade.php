@@ -1,3 +1,3 @@
-<div class="section-btn" >
-    <a href="" class="btn-{{$class}}">{{$name}}</a>
+<div class="section-btn">
+    <a href="{{$link}}" class="btn-{{$class}}">{{$name}}</a>
 </div>

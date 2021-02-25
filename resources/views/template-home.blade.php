@@ -89,5 +89,8 @@
             @include('partials.section-button', ['class' => 'main', 'name' => 'More Comments'])
         @endslot
     @endtypetwo
-
+    
+    <div class="footer-img">
+        @include('images.footer-humaaans')
+    </div>
 @endsection

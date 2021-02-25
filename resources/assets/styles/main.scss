@@ -11,13 +11,13 @@
  */
 // @import "~some-node-module";
 
-
 /** Import theme styles */
 @import "common/global";
 @import "common/responsive";
 @import "components/blocks";
 @import "components/blogs";
 @import "components/buttons";
+@import "components/category";
 @import "components/comments";
 @import "components/faq";
 @import "components/forms";
