@@ -1,16 +1,21 @@
 <header class="page-header">
 
-    <div id="scroll-top-button"></div>
+    <div id="scroll-top-button" title="Scroll To Top"></div>
 
     <a class="skip-link sr-only sr-only-focusable" href="#content">@php esc_html_e( 'Skip to content', 'sage')@endphp</a>
 
     <nav id="main-nav" class="navbar navbar-expand-md" aria-labelledby="main-nav-label">
 
         <div class="container">
-            @if ( function_exists( 'the_custom_logo' ) ) 
+            @if ( function_exists( 'the_custom_logo' ) )
+            
                 <a class="navbar-brand brand" href="{{ home_url('/') }}">
-                    {!! the_custom_logo() !!}
+                    <h1>Tranquil <div class="bookmark"></div></h1>
                 </a>
+
+                @else
+                {!! the_custom_logo() !!}
+
             @endif
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="@php esc_attr_e( 'Toggle navigation', 'sage'); @endphp">

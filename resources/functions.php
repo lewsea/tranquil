@@ -93,7 +93,7 @@ Container::getInstance()
         ]);
     }, true);
 
-    // why is this not working in controller ? find a way to make it work again, it just returns zero when i put it in App.php, must be because its inside the loop.
+// why is this not working in controller ? find a way to make it work again, it just returns zero when i put it in App.php, must be because its inside the loop.
 
 function reading_time() {
     $content = get_post_field( 'post_content', $post->ID );
@@ -107,3 +107,18 @@ function reading_time() {
     $totalreadingtime = $readingtime . $timer;
     return $totalreadingtime;
 }
+
+// post view
+
+// function set_post_views($postID) {
+//     $count_key = 'post_views_count';
+//     $count = get_post_meta($postID, $count_key, true);
+//     if($count==''){
+//         $count = 0;
+//         delete_post_meta($postID, $count_key);
+//         add_post_meta($postID, $count_key, '0');
+//     }else{
+//         $count++;
+//         update_post_meta($postID, $count_key, $count);
+//     }
+// }

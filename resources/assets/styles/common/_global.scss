@@ -17,15 +17,15 @@ h2 {
 }
 
 .slick-arrow {
-    &::before {
-        color: $text-primary;
-        font-size: 2rem;
-    }
+  &::before {
+    color: $text-primary;
+    font-size: 2rem;
+  }
 }
 
 .slick-slide {
-    min-height: 220px;
-    margin: 0 1rem;
+  min-height: 220px;
+  margin: 0 1rem;
 }
 
 .section-wrapper {
@@ -144,27 +144,27 @@ h2 {
     @extend .col-desc;
     p {
       color: $text-primary;
-      max-width: 550px
+      max-width: 550px;
     }
     .collection-cta {
-        margin-top: 3rem
+      margin-top: 3rem;
     }
   }
   .collection-img {
     @extend .col-img;
     .section-wrapper {
-        margin-top: 8rem;
+      margin-top: 8rem;
     }
-    .blocks-container {
-        gap: 2rem;
-        .block {
-            width: 260px;
-            flex: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
-            &:nth-of-type(even) {
-                margin-top: -10rem;
-            }
+    .books-container {
+      gap: 2rem;
+      .book {
+        width: 260px;
+        flex: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        &:nth-of-type(even) {
+          margin-top: -10rem;
         }
+      }
     }
   }
 }
@@ -236,3 +236,22 @@ h2 {
   }
 }
 
+.recent-smol {
+  .slick-list {
+    .slick-track {
+      .book {
+        flex-direction: row-reverse !important;
+        // flex: 33% !important;
+      }
+    }
+  }
+}
+
+.page-template-template-books {
+  .slick-prev {
+    left: -50px;
+  }
+  .slick-next {
+    right: -50px;
+  }
+}

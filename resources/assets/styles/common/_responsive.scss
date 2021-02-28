@@ -36,7 +36,7 @@ $xl: 1200px;
 }
 
 @media (max-width: $md) {
-  .hero-header {
+  .hero-wrapper {
     background-color: $theme-color;
     .container {
       height: calc(100vh - 213px);
@@ -58,8 +58,30 @@ $xl: 1200px;
       }
     }
   }
-  .blocks-container {
-    gap: 2rem !important;
+  .books-container {
+    gap: 1rem !important;
+  }
+  .about-wrapper {
+    .container {
+      .about-desc {
+        color: $text-primary;
+        position: unset;
+        width: 100%;
+        padding: 0;
+        transform: translate(0, 0);
+        p {
+          color: $text-primary;
+        }
+      }
+      .about-img {
+        display: none;
+      }
+    }
+  }
+  .collection-wrapper {
+    .collection-img {
+      display: none;
+    }
   }
 }
 

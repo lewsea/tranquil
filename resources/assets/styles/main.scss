@@ -14,13 +14,14 @@
 /** Import theme styles */
 @import "common/global";
 @import "common/responsive";
-@import "components/blocks";
+@import "components/books";
 @import "components/blogs";
 @import "components/buttons";
 @import "components/category";
 @import "components/comments";
 @import "components/faq";
 @import "components/forms";
+@import "components/searchform";
 @import "components/wp-classes";
 @import "layouts/header";
 @import "layouts/sidebar";

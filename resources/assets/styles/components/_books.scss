@@ -1,16 +1,17 @@
-.blocks-container {
+.books-container {
   @extend .container;
   max-width: 1169px;
   padding: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 2.5%;
-  .block {
+  .book {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     flex: 20%;
     padding: 1rem;
+    background-color: #5cbef7;
     border-radius: $border-radius;
     transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     &:hover {
@@ -29,15 +30,21 @@
     &:nth-of-type(4) {
       background-color: #907cc9;
     }
-    .block-terms {
+    // &:nth-of-type(odd) {
+    //   background-color: #5cbef7;
+    // }
+    // &:nth-of-type(even) {
+    //   background-color: #53f2d6;
+    // }
+    .book-terms {
       display: flex;
       gap: 10px;
       font-family: $font-sec;
       font-size: 14px;
       color: $text-white;
     }
-    .block-title {
-      font-size: clamp(2rem, 4vw, 34px);
+    .book-title {
+      font-size: clamp(1.5rem, 4vw, 34px);
       color: $text-white;
       margin: 0;
       font-weight: 500;
@@ -46,8 +53,12 @@
         text-decoration: none;
       }
     }
-    .block-img {
+    .book-img {
       align-self: center;
+      img {
+        max-width: 220px;
+        width: 100%;
+      }
     }
   }
 }

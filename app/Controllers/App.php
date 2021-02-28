@@ -37,6 +37,7 @@ class App extends Controller
             array(
                 'taxonomy'   => 'category',
                 'hide_empty' => true,
+                'number' => '4',
             )
         );
         

@@ -1,6 +1,6 @@
 export default {
   init() {
-    jQuery('.testimonials-container').slick({
+    jQuery(".testimonials-container").slick({
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -29,6 +29,7 @@ export default {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            arrows: false,
           },
         },
       ],

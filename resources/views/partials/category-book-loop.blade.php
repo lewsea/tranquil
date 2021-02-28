@@ -1,8 +1,8 @@
 <div class="section-wrapper">
     <div class="container">
         <h4>{{$title}}</h4>
-        <div class="books-container">
-            @while ($book_post->have_posts()) @php $book_post->the_post() @endphp
+        <div class="books-container book-slick-container">
+            @while ($cat_book_post->have_posts()) @php $cat_book_post->the_post() @endphp
                 <article class="book">
                     <div class="book-header">
                         <a href="{{ the_permalink() }}" class="book-title">{{ the_title() }} </a>

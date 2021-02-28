@@ -1,3 +1,7 @@
 <div class="page-header">
-  <h1>{!! App::title() !!}</h1>
+    <div class="section-wrapper">
+        <div class="container">
+            <img src="@asset($img)">
+        </div>
+    </div>
 </div>

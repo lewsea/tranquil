@@ -45,3 +45,32 @@
     display: flex;
   }
 }
+
+.navbar-brand{
+    color: $text-primary;
+    position: relative;
+    &:hover {
+        color: unset;
+    }
+    h1 {
+        margin: 0;
+        &:hover {
+            .bookmark {
+              height: 35px;
+            }
+        }
+    }
+    .bookmark {
+    position: absolute;
+      right: -25px;
+      top: 0;
+      height: 25px;
+      width: 8px;
+      padding: 0px;
+      transform: rotate(0deg) skew(0deg);
+      border-left: 8px solid $theme-color;
+      border-right: 8px solid $theme-color;
+      border-bottom: 8px solid transparent;
+      transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+}

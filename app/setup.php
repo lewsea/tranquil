@@ -145,4 +145,6 @@ add_action('after_setup_theme', function () {
      */
     sage('blade')->compiler()->component('components.type-one', 'typeone');
     sage('blade')->compiler()->component('components.type-two', 'typetwo');
+    sage('blade')->compiler()->component('components.book-loop', 'book');
+    sage('blade')->compiler()->component('components.cat-loop', 'category');
 });

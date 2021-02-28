@@ -1,0 +1,32 @@
+.searchform-container {
+    @extend .container;
+    max-width: 1169px;
+    padding: 0;
+    #searchform {
+        .input-group {
+            box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
+            border-radius: $border-radius-img;
+            .form-control {
+                border-radius: $border-radius-img 0 0 $border-radius-img;
+                padding: 2rem 1.5rem;
+                border: 1px solid $border-color;
+                border-right: none;
+            }
+            .input-group-append {
+                .submit {
+                    border-radius: 0 $border-radius-img $border-radius-img 0;
+                    padding: 1rem 2rem;
+                    background: transparent;
+                    color: $theme-color;
+                    border: 1px solid $border-color;
+                    border-left: none;
+                    .iconify {
+                        font-size: 1.5rem;
+                        height: 100%;
+                        vertical-align: unset;
+                    }
+                }
+            }
+        }
+    }
+}

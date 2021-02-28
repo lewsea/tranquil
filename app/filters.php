@@ -89,3 +89,12 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+ * Tell WordPress how to find the compiled path of searchform.blade.php
+ *
+ * @return string
+ */
+add_filter('get_search_form', function () {
+    return template(config('theme.dir') . '/resources/views/partials/searchform.blade.php');
+});
