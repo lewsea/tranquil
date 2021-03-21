@@ -11,25 +11,25 @@
     gap: 3rem;
     flex: 20%;
     padding: 1rem;
-    background-color: #5cbef7;
+    // background-color: #5cbef7;
     border-radius: $border-radius;
     transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     &:hover {
       box-shadow: $material-shadow;
       transform: scale(1.05);
     }
-    &:nth-of-type(1) {
-      background-color: #749ee8;
-    }
-    &:nth-of-type(2) {
-      background-color: #53f2d6;
-    }
-    &:nth-of-type(3) {
-      background-color: #5cbef7;
-    }
-    &:nth-of-type(4) {
-      background-color: #907cc9;
-    }
+    // &:nth-of-type(1) {
+    //   background-color: #749ee8;
+    // }
+    // &:nth-of-type(2) {
+    //   background-color: #53f2d6;
+    // }
+    // &:nth-of-type(3) {
+    //   background-color: #5cbef7;
+    // }
+    // &:nth-of-type(4) {
+    //   background-color: #907cc9;
+    // }
     // &:nth-of-type(odd) {
     //   background-color: #5cbef7;
     // }

@@ -185,9 +185,9 @@ h2 {
     margin-top: 5rem;
     a {
       font-weight: 600;
-      &:hover {
-        color: initial !important;
-      }
+      //   &:hover {
+      //     color: initial !important;
+      //   }
     }
   }
 }
@@ -241,6 +241,7 @@ h2 {
     .slick-track {
       .book {
         flex-direction: row-reverse !important;
+        gap: 0 !important;
         // flex: 33% !important;
       }
     }
@@ -253,5 +254,88 @@ h2 {
   }
   .slick-next {
     right: -50px;
+  }
+}
+
+.error-page-container {
+  height: calc(100vh - 107px);
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .error-desc,
+  .error-img {
+    flex: 1;
+  }
+  .error-desc {
+    h1 {
+      font-weight: 600;
+      font-size: clamp(2rem, 6vw, 78px);
+      line-height: 5rem;
+      color: $text-white;
+      text-shadow: 0px 0px 0.1px black, -0px 0px 0.1px black,
+        -0px -0px 0.1px black, 0px -0px 0.1px black, 0px 1px 0.1px black,
+        -0px 1px 0.1px black, -0px -1px 0.1px black, 0px -1px 0.1px black,
+        0px 2px 0.1px black, -0px 2px 0.1px black, -0px -2px 0.1px black,
+        0px -2px 0.1px black, 1px 0px 0.1px black, -1px 0px 0.1px black,
+        -1px -0px 0.1px black, 1px -0px 0.1px black, 1px 1px 0.1px black,
+        -1px 1px 0.1px black, -1px -1px 0.1px black, 1px -1px 0.1px black,
+        1px 2px 0.1px black, -1px 2px 0.1px black, -1px -2px 0.1px black,
+        1px -2px 0.1px black, 2px 0px 0.1px black, -2px 0px 0.1px black,
+        -2px -0px 0.1px black, 2px -0px 0.1px black, 2px 1px 0.1px black,
+        -2px 1px 0.1px black, -2px -1px 0.1px black, 2px -1px 0.1px black,
+        2px 2px 0.1px black, -2px 2px 0.1px black, -2px -2px 0.1px black,
+        2px -2px 0.1px black, 0px 0px 0px hsla(0, 0%, 0%, 0), 0px 1px 0 #4a6868,
+        0px 2px 0 #405959, 0px 3px 0 #354a4a, 0px 0px 0px hsla(0, 0%, 0%, 0),
+        -4px 4px 6px black;
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 3rem 0 1rem;
+    }
+    #searchform {
+      .input-group {
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        border-radius: $border-radius-img;
+        .form-control {
+          border-radius: $border-radius-img 0 0 $border-radius-img;
+          padding: 2rem 1.5rem;
+          border: 1px solid $border-color;
+          border-right: none;
+        }
+        .input-group-append {
+          .submit {
+            border-radius: 0 $border-radius-img $border-radius-img 0;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: $theme-color;
+            border: 1px solid $border-color;
+            border-left: none;
+            .iconify {
+              font-size: 1.5rem;
+              height: 100%;
+              vertical-align: unset;
+            }
+          }
+        }
+      }
+    }
+    .footer-nav {
+      border-right: unset !important;
+      li::marker {
+        color: $theme-color;
+        font-size: 1.5rem;
+        a:hover {
+          color: $text-primary;
+        }
+      }
+    }
+  }
+  .error-img {
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 }

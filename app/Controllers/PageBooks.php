@@ -48,11 +48,16 @@ class PageBooks extends Controller
     }
 
     public function pageBookCat() {
+        $args = array ('exclude'=>1,'fields'=>'ids');   
+        $exclude_uncategorized = get_terms('category',$args);
+
         $categories = get_categories(array(
-            'post_type' => 'post',
+            'post_type' => 'books',
             'taxonomy'   => 'category',
+            'category__not_in' => array('1'),
+            'cat' => -1,
             'hide_empty' => true,
-            'number' => 4,
+            'number' => 7,
         ));
 
         return $categories;
@@ -62,7 +67,7 @@ class PageBooks extends Controller
     public function catBookPost() {
         $args = [
             'post_type' => 'books',
-            'posts_per_page' => '-1',
+            'posts_per_page' => -1,
         ];
         
         $query = new \WP_Query($args);

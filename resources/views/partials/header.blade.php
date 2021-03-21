@@ -27,16 +27,43 @@
             @endif
 
             <div class="menu-option ml-5">
-                <span class="menu-icon">
+                <button id="page-menu-btn" class="menu-icon ml-3" data-toggle="tooltip" data-placement="bottom" title="Page Menu">
+                    <span class="iconify" data-inline="false" data-icon="ant-design:menu-unfold-outlined"></span>   
+                </button>
+
+                <button id="page-search-btn" class="menu-icon" data-toggle="tooltip" data-placement="bottom" title="Page Search">
                     <span class="iconify" data-inline="false" data-icon="ant-design:search-outlined"></span>
-                </span>
-                <span class="menu-icon ml-3">
-                    <span class="iconify" data-inline="false" data-icon="ant-design:menu-unfold-outlined"></span>
-                </span>
-                <div class="menu-icon ml-3">
+                </button>
+                
+                {{-- <div class="menu-icon ml-3">
                     <span class="iconify" data-inline="false" data-icon="ant-design:shopping-cart-outlined"></span>
-                </div>
+                </div> --}}
             </div>
+
+            {{-- <div id="side-menu" class="page-menu">
+                <div class="page-menu-content">
+                    <h3>Explore</h3>
+                    {{ wp_nav_menu (array ('menu' => '24','menu_class' => 'p-0 m-0 list-unstyled footer-nav')) }}
+                    <h3>Discover</h3>
+                    {{ wp_nav_menu (array ('menu' => '4','menu_class' => 'p-0 m-0 list-unstyled footer-nav')) }}
+                    <div class="page-menu-socials">
+                        <a href="#"><span class="iconify" data-inline="false" data-icon="feather:facebook"></span></a>
+                        <a href="#"><span class="iconify" data-inline="false" data-icon="fe:instagram"></span></a>
+                        <a href="#"><span class="iconify" data-inline="false" data-icon="ant-design:twitter-outlined"></span></a>
+                        <a href="#"><span class="iconify" data-inline="false" data-icon="ant-design:youtube-outlined"></span></a>
+                        <a href="#"><span class="iconify" data-inline="false" 
+                        data-icon="mdi:spotify"></span></a>
+                    </div>
+                </div>
+            </div> --}}
+
+            {{-- <div id="page-search" class="page-search">
+                <div class="page-search-overlay"></div>
+                <div class="page-search-content">
+                    {{ get_search_form() }}
+                </div>
+                <div class="search-close" id="search-close-btn"><span class="iconify" data-inline="false" data-icon="fe:close"></span></div>
+            </div> --}}
 
         </div>
 

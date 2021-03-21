@@ -45,6 +45,7 @@
     
     @category(['title' => 'Browse By Subject'])
         @slot('content')
+        {{-- wow why did i name that as page_book_cat --}}
             @foreach($page_book_cat as $category)
                 @include('partials.category')
             @endforeach

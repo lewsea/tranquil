@@ -14,6 +14,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
     wp_enqueue_script('iconify', '//code.iconify.design/1/1.0.6/iconify.min.js', null, true);
+    // wp_enqueue_style('transition-css', '//unpkg.com/transition-style/transition.squares.min.css', false, null);
 
     wp_enqueue_style( 'slick-css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', false, null );
     wp_enqueue_style( 'slick-theme-css', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css', false, null );

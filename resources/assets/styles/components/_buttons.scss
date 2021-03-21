@@ -1,62 +1,95 @@
 .accent-btn {
   padding: 15px 3rem;
+  position: relative;
   &:hover {
     text-decoration: none;
-    color: unset;
+    color: inherit !important;
   }
 }
+//   }
+//   &::before {
+//     content: " ";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     inset: 0 0 0 0;
+//     background: $theme-color;
+//     z-index: -1;
+//     transition: transform 0.3s ease;
+//     transform: scaleX(0);
+//     transform-origin: bottom right;
+//   }
+//   &:hover::before {
+//     transform: scaleX(1);
+//     transform-origin: bottom left;
+//   }
 
 .btn-main {
   @extend .accent-btn;
   background-color: $theme-color;
   color: $text-white;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    padding: 1rem 4rem;
+  }
 }
 
 .btn-sec {
   @extend .accent-btn;
   border: 1px solid $theme-color;
   color: $text-primary;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    padding: 1rem 4rem;
+  }
 }
 
 .btn-blk {
   @extend .accent-btn;
   background-color: $bg-secondary;
   color: $text-white;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    padding: 1rem 4rem;
+    color: white !important;
+  }
 }
 
 #scroll-top-button {
-	display: block;
-	position: fixed;
-	top: 0;
-	right: 30px;
-    height: 150px;
-    width: 30px;
-    padding: 0px;
-    transform: rotate(0deg) skew(0deg);
-    border-left: 15px solid $theme-color;
-    border-right: 15px solid $theme-color;
-    border-bottom: 15px solid transparent;
-    transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-	opacity: 0;
-	visibility: hidden;
-	z-index: 1000;
-	&:hover {
-		cursor: pointer;
-        height: 170px;
-	}
-	&.show {
-		opacity: 1;
-		visibility: visible;
-	}
-    &::after {
-        content: ' \2191 TOP';
-        word-wrap: break-word;
-        color: $text-white;
-        display: block;
-        font-weight: bold;
-        position: relative;
-        left: -5px;
-        top: 30px;
-    }
-    
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 30px;
+  height: 150px;
+  width: 30px;
+  padding: 0px;
+  transform: rotate(0deg) skew(0deg);
+  border-left: 15px solid $theme-color;
+  border-right: 15px solid $theme-color;
+  border-bottom: 15px solid transparent;
+  transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  &:hover {
+    cursor: pointer;
+    height: 170px;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  &::after {
+    content: " \2191 TOP";
+    word-wrap: break-word;
+    color: $text-white;
+    display: block;
+    font-weight: bold;
+    position: relative;
+    left: -5px;
+    top: 30px;
+  }
 }

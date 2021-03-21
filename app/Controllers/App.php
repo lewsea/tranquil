@@ -68,6 +68,25 @@ class App extends Controller
         return $categories;
     }
 
+    public function relatedBooks() {
+        $customTaxonomyTerms = wp_get_object_terms( $post->ID, 'category', array('fields' => 'ids') );
+        $args = array(
+            'post_type' => 'books',
+            'post_status' => 'publish',
+            'posts_per_page' => 5,
+            'post__not_in' => array ($post->ID),
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'category',
+                    'field' => 'id',
+                    'terms' => $customTaxonomyTerms
+                )
+            ),
+        );
+        $relatedPosts = new \WP_Query($args);
+        return $relatedPosts;
+    }
+
     public function blogPagination() {
         $args = array(
             'number' => 7,

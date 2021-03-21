@@ -59,8 +59,41 @@ export default {
         $("html, body").animate({ scrollTop: 0 }, "300");
       });
     });
+
+    // Show the first tab and hide the rest
+    jQuery("#navs-tab li:first-child").addClass("active");
+    jQuery(".tab-content").hide();
+    jQuery(".tab-content:first").show();
+    jQuery("#navs-tab li:first-child .bookmark").addClass("bookmark-active");
+
+    // Click function
+    jQuery("#navs-tab li").click(function () {
+      jQuery("#navs-tab li").removeClass("active");
+      jQuery("#navs-tab li .bookmark").removeClass("bookmark-active");
+      jQuery(this).find(".bookmark").addClass("bookmark-active");
+      //   jQuery(this).addClass("bookmark-active");
+      jQuery(".tab-content").hide();
+
+      var activeTab = jQuery(this).find("a").attr("href");
+      jQuery(activeTab).show();
+      return false;
+    });
   },
   finalize() {
-    // JavaScript to be fired on all pages, after page specific JS is fired
+    var colors = [
+      "#749ee8",
+      "#53f2d6",
+      "#5cbef7",
+      "#907cc9",
+      "#85F9B3",
+      "#41E8F0",
+      "#98E8F1",
+    ];
+    jQuery(".book").each(function () {
+      jQuery(this).css(
+        "background-color",
+        colors[Math.floor(Math.random() * colors.length)]
+      );
+    });
   },
 };
